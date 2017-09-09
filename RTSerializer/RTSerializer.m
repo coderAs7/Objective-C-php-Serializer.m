@@ -144,7 +144,7 @@
 				if(!value) value = [NSNull null];
 				
 				if(alRet != nil){
-					if([key rangeOfCharacterFromSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]].location == NSNotFound && [key intValue]==alRet.count)
+					if([key isKindOfClass:[NSString class]] && [key rangeOfCharacterFromSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]].location == NSNotFound && [key intValue]==alRet.count)
 						[alRet addObject:value];
 					else
 						alRet=nil;
